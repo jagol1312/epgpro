@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>EPG</title>
+<link rel="stylesheet" href="/layui/css/layui.css">
+<link rel="stylesheet" href="/swiper/css/swiper.min.css">
+<style type="text/css">
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+#matchsday li {
+	color: white;
+}
+</style>
+</head>
+<body>
+	<div style="color: black; background: black;">
+		<div>
+			<ul class="layui-nav">
+				<div style="padding-left: 100px; padding-right: 100px;">
+					<li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-video" style="font-size:30px;color:#8f8f1b">EPG</i></a></li>
+					<li class="layui-nav-item"><a href="javascript:;">ALL</a></li>
+					<li class="layui-nav-item"><a href="">TV</a></li>
+					<li class="layui-nav-item"><a href="">MOVIES</a></li>
+					<li class="layui-nav-item"><a href="">SPORTS</a></li>
+					<li class="layui-nav-item"><a href="">KIDS</a></li>
+					<li class="layui-nav-item"><a href="">ADULT</a></li>
+					<li class="layui-nav-item" style="float: right"><select
+						name="Language" lay-verify="">
+							<option value="1" selected="">English</option>
+							<option value="2">Chinese中文</option>
+							<option value="3">Japanese</option>
+					</select></li>
+				</div>
+			</ul>
+		</div>
+		<!-- AD -->
+		<div id="ad" style="padding-left: 100px; padding-right: 100px;">
+
+		</div>
+		<!--今日赛事-->
+		<div class="layui-row"
+			style="padding-left: 100px; padding-right: 100px; margin-top: 30px">
+			<div class="layui-col-lg8">
+				<div>
+					<h1 style="color: white">Wonderful Matchs</h1>
+				</div>
+				<div class="layui-tab">
+					<ul class="layui-tab-title" id="matchsday">
+						<li class="layui-this">Today</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+					</ul>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img alt="" src="\images\1.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img alt="" src="\images\2.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img alt="" src="\images\3.jpg">
+							</div>
+							<div class="swiper-slide">Slide 4</div>
+							<div class="swiper-slide">Slide 5</div>
+							<div class="swiper-slide">Slide 6</div>
+							<div class="swiper-slide">Slide 7</div>
+							<div class="swiper-slide">Slide 8</div>
+							<div class="swiper-slide">Slide 9</div>
+							<div class="swiper-slide">Slide 10</div>
+						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+
+				</div>
+			</div>
+			<!--搜索-->
+			<div class="layui-col-lg4">
+				<div>
+					<li>
+						<div class="layui-input-block"
+							style="width: auto; position: relative;">
+							<input style="float: left; width: auto;" type="text"
+								id="searchtext" name="searchtext" placeholder="input here"
+								class="layui-input">
+							<button class="layui-btn layui-icon layui-icon-search"
+								id="searchBtn" style="float: right;">Search</button>
+						</div>
+
+					</li>
+				</div>
+				<!-- hot search -->
+				<div
+					style="background-color: rgb(42, 38, 38); margin-left: 100px; margin-top: 20px">
+					<div class="layui-card-header"
+						style="width: auto; height: aut; background-color: rgb(42, 38, 38)">
+						<i class="layui-icon layui-icon-fire" style="color: #eae20d;">Hot
+							Search</i>
+					</div>
+					<div class="layui-card-body"
+						style="width: auto; height: auto; background-color: rgb(42, 38, 38)">
+						内容<br>one
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- TV Guide -->
+	<div style="padding-left: 100px; padding-right: 100px;">
+		<div style="float: left; width: 100%">
+			<h1>TV Guide</h1>
+		</div>
+		<div class="layui-form" action="">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-inline layui-col-lg4">
+					<select name="Satellite" lay-filter="Satellite"
+						style="width: 100%; height: 30px">
+						<option value="1" selected="">All Satellite</option>
+						<option value="2">游戏</option>
+						<option value="3">音乐</option>
+						<option value="4">旅行</option>
+					</select>
+				</div>
+				<div class="layui-inline layui-col-lg4">
+					<select name="Transponder" lay-filter="Transponder"
+						style="width: 100%; height: 30px">
+						<option value="1" selected="">All Transponder</option>
+						<option value="2">游戏</option>
+						<option value="3">音乐</option>
+						<option value="4">旅行</option>
+					</select>
+				</div>
+				<div class="layui-input-block" style="float: right">
+					<input type="radio" name="display" title="Grid" value="Grid">
+					<input type="radio" name="display" title="List" value="List"
+						checked="">
+				</div>
+			</div>
+		</div>
+		<div>
+			<ul class="layui-nav layui-bg-cyan">
+				<li class="layui-nav-item"><a href="">藏青导航</a></li>
+				<li class="layui-nav-item layui-this"><a href="">Today</a></li>
+				<li class="layui-nav-item"><a href="">大数据</a></li>
+				<li class="layui-nav-item"><a href="javascript:;">解决方案</a></li>
+				<li class="layui-nav-item"><a href="">社区</a></li>
+				<li class="layui-nav-item"><a href="">社区</a></li>
+				<li class="layui-nav-item"><a href="">社区</a></li>
+			</ul>
+		</div>
+        <table class="layui-hide" id="table"></table>
+	</div>
+
+	<script src="/layui/layui.js" charset="utf-8"></script>
+	<script src="/swiper/js/swiper.min.js" charset="utf-8"></script>
+	<script>
+		layui.use([ 'element', 'layer', 'form' ], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+		});
+	</script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView : 4,
+			spaceBetween : 25,
+			slidesPerGroup : 1,
+			loop : true,
+			loopFillGroupWithBlank : true,
+			navigation : {
+				nextEl : '.swiper-button-next',
+				prevEl : '.swiper-button-prev',
+			},
+		});
+	</script>
+</body>
+</html>
