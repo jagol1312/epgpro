@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 /**
  * 
- * @author Administrator
+ * @author  jagol
  * @date 2020年4月3日上午11:14:50
  * 描述：
  */
