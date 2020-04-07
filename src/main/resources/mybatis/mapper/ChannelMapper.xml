@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper   
 PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
-"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd"> 
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.epgpro.dao.ChannelMapper">
+	<resultMap type="com.epgpro.model.ChannelDo" id="ChannelMap">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="callsign" property="callsign" />
+		<result column="webtype" property="webType" />
+		<result column="contentid" property="contentId" />
+		<result column="createtime" property="createTime" />
+		<result column="description" property="description" />
+		<result column="language" property="language" />
+		<result column="status" property="status" />
+		<result column="showNo" property="showNO"/>
+		<result column="imgurl" property="imgUrl" />
+		<result column="property" property="property" />
+		<collection property="scheduleDoList"
+			ofType="com.epgpro.model.ScheduleDo">
+			<id column="id" property="id" />
+			<result column="channelid" property="channelId" />
+			<result column="contentid" property="contentId" />
+			<result column="programname" property="programName" />
+			<result column="startdate" property="startDate" />
+			<result column="starttime" property="startTime" />
+			<result column="endtime" property="endTime" />
+			<result column="duration" property="duraion" />
+			<result column="description" property="description" />
+			<result column="imgurl" property="imgUrl" />
+			<result column="createtime" property="createTime" />
+			<result column="language" property="language" />
+			<result column="satellite" property="satellite" />
+			<result column="property" property="property" />
+			<result column="videourl" property="videoUrl" />
+			<result column="source" property="source" />
+		</collection>
+	</resultMap>
+	<select id="selectFifteenDaysEpgByAll" parameterType="Date"
+		resultMap="ChannelMap">
+		select
+		channel.imgurl,channel.showNo,channel.name,`schedule`.programname,`schedule`.starttime,`schedule`.endtime
+		from channel join `schedule`
+		on channel.id = `schedule`.channelid
+		and UNIX_TIMESTAMP(`schedule`.startdate) BETWEEN
+		UNIX_TIMESTAMP(#{befortoday}) and UNIX_TIMESTAMP(#{aftertoday})
+		and channel.showNo is NOT NULL
+		and channel.name is not null
+		and `schedule`.programname is not null
+		order by showNo + 0
+	</select>
+	<select id="test" parameterType="Integer"
+		resultType="com.epgpro.model.ChannelDo">
+		select * from channel where id = #{id}
+	</select>
+
 </mapper>

@@ -2,6 +2,8 @@ package com.epgpro.model;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 
 /**
@@ -16,21 +18,21 @@ public class ScheduleDo {
     private Integer id;
 
    
-    private Integer channelid;
+    private Integer channelId;
 
    
-    private String contentid;
+    private String contentId;
 
     
-    private String programname;
+    private String programName;
 
-   
-    private Date startdate;
-
-    private Date starttime;
+    @DateTimeFormat(pattern = "HH:mm")
+    private Date startDate;
+    @DateTimeFormat(pattern = "HH:mm")
+    private Date startTime;
 
   
-    private Date endtime;
+    private Date endTime;
 
     
     private String duration;
@@ -38,10 +40,10 @@ public class ScheduleDo {
     private String description;
 
    
-    private String imgurl;
+    private String imgUrl;
 
    
-    private Date createtime;
+    private Date createTime;
 
   
     private String language;
@@ -53,7 +55,7 @@ public class ScheduleDo {
     private String property;
 
     
-    private String videourl;
+    private String videoUrl;
 
    
     private Integer source;

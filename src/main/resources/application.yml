@@ -9,8 +9,8 @@ spring:  thymeleaf:    cache: false
     suffix: .html  datasource:    username: epg
     password: hAA518NJCV8wKGVq
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.7.200:3316/epg?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC&amp;rewriteBatchedStatements=true
+    url: jdbc:mysql://192.168.7.200:3316/epg?characterEncoding=utf8&&useSSL=false&&serverTimezone=UTC&&rewriteBatchedStatements=true
         
 mybatis:  configuration:    map-underscore-to-camel-case: true
   mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.epg.model
+  type-aliases-package: com.epgpro.model

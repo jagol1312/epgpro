@@ -30,6 +30,10 @@
 
 #matchsday li {
 	color: white;
+	font-size: 10px;
+}
+#tvguidenav li a {
+    padding-left: 0px 19px;
 }
 </style>
 </head>
@@ -37,8 +41,10 @@
 	<div style="color: black; background: black;">
 		<div>
 			<ul class="layui-nav">
-				<div style="padding-left: 100px; padding-right: 100px;">
-					<li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-video" style="font-size:30px;color:#8f8f1b">EPG</i></a></li>
+				<div style="padding-left: 10%; padding-right: 10%;">
+					<li class="layui-nav-item"><a href=""><i
+							class="layui-icon layui-icon-video"
+							style="font-size: 30px; color: #8f8f1b">EPG</i></a></li>
 					<li class="layui-nav-item"><a href="javascript:;">ALL</a></li>
 					<li class="layui-nav-item"><a href="">TV</a></li>
 					<li class="layui-nav-item"><a href="">MOVIES</a></li>
@@ -55,12 +61,12 @@
 			</ul>
 		</div>
 		<!-- AD -->
-		<div id="ad" style="padding-left: 100px; padding-right: 100px;">
+		<div id="ad" style="padding-left: 10%; padding-right: 10%;">
 
 		</div>
 		<!--今日赛事-->
 		<div class="layui-row"
-			style="padding-left: 100px; padding-right: 100px; margin-top: 30px">
+			style="padding-left: 10%; padding-right: 10%; margin-top: 30px">
 			<div class="layui-col-lg8">
 				<div>
 					<h1 style="color: white">Wonderful Matchs</h1>
@@ -68,13 +74,13 @@
 				<div class="layui-tab">
 					<ul class="layui-tab-title" id="matchsday">
 						<li class="layui-this">Today</li>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-						<li>5</li>
-						<li>6</li>
-						<li>7</li>
+						<li><p>1Mon</p></li>
+						<li><p>2Tue</p></li>
+						<li><p>3Wed</p></li>
+						<li><p>4Thu</p></li>
+						<li><p>5Fri</p></li>
+						<li><p>6Sat</p></li>
+						<li><p>7Sun</p></li>
 					</ul>
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
@@ -87,9 +93,15 @@
 							<div class="swiper-slide">
 								<img alt="" src="\images\3.jpg">
 							</div>
-							<div class="swiper-slide">Slide 4</div>
-							<div class="swiper-slide">Slide 5</div>
-							<div class="swiper-slide">Slide 6</div>
+							<div class="swiper-slide">
+								<img alt="" src="\images\1.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img alt="" src="\images\2.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img alt="" src="\images\3.jpg">
+							</div>
 							<div class="swiper-slide">Slide 7</div>
 							<div class="swiper-slide">Slide 8</div>
 							<div class="swiper-slide">Slide 9</div>
@@ -104,22 +116,19 @@
 			</div>
 			<!--搜索-->
 			<div class="layui-col-lg4">
-				<div>
-					<li>
-						<div class="layui-input-block"
-							style="width: auto; position: relative;">
-							<input style="float: left; width: auto;" type="text"
-								id="searchtext" name="searchtext" placeholder="input here"
-								class="layui-input">
-							<button class="layui-btn layui-icon layui-icon-search"
-								id="searchBtn" style="float: right;">Search</button>
-						</div>
-
-					</li>
+				<div style="width: 100%;height: 20%;margin-left: 15%">
+						<form class="layui-form" action="">							
+								<input style="float: left; width: 70%;" type="text"
+									id="searchtext" name="searchtext" placeholder="input here"
+									class="layui-input">
+								<button
+									class="layui-btn lay-submit layui-icon layui-icon-search"
+									id="searchBtn" style="width: 30%">Search</button>
+						</form>
 				</div>
 				<!-- hot search -->
 				<div
-					style="background-color: rgb(42, 38, 38); margin-left: 100px; margin-top: 20px">
+					style="background-color: rgb(42, 38, 38); width: 100%;margin-left: 15%; margin-top: 20px">
 					<div class="layui-card-header"
 						style="width: auto; height: aut; background-color: rgb(42, 38, 38)">
 						<i class="layui-icon layui-icon-fire" style="color: #eae20d;">Hot
@@ -127,14 +136,14 @@
 					</div>
 					<div class="layui-card-body"
 						style="width: auto; height: auto; background-color: rgb(42, 38, 38)">
-						内容<br>one
+						one<br>two<br>there<br>four<br>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- TV Guide -->
-	<div style="padding-left: 100px; padding-right: 100px;">
+	<div style="margin-left: 10%; margin-right: 10%;">
 		<div style="float: left; width: 100%">
 			<h1>TV Guide</h1>
 		</div>
@@ -165,30 +174,25 @@
 				</div>
 			</div>
 		</div>
-		<div>
-			<ul class="layui-nav">
-			<div>
-				<li class="layui-nav-item" style="float:left;"><a href="">导航</a></li>               
-                <li class="layui-nav-item"><a href="">数据</a></li>
-                <li class="layui-nav-item"><a href="">方案</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item layui-this"><a href="">Today</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                <li class="layui-nav-item"><a href="">社区1</a></li>
-                </div>
-			</ul>
-		</div>
-        <table class="layui-hide" id="table"></table>
-	</div>
-
+		</div>          	
+           <ul class="layui-nav" id="tvguidenav" style="margin-left: 10%; margin-right: 10%;">
+                    <li class="layui-nav-item"><a href="">导航</a></li>
+                    <li class="layui-nav-item"><a href="">数据</a></li>
+                    <li class="layui-nav-item"><a href="">方案</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item layui-this"><a href="">Today</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href="">社区1</a></li>
+            </ul>
+           <table class="layui-hide" id="table"></table>
 	<script src="/layui/layui.js" charset="utf-8"></script>
 	<script src="/swiper/js/swiper.min.js" charset="utf-8"></script>
 	<script>

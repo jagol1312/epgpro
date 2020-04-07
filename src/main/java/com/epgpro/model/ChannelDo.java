@@ -1,6 +1,7 @@
 package com.epgpro.model;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 /**
@@ -21,13 +22,13 @@ public class ChannelDo {
     private String callsign;
 
   
-    private String webtype;
+    private String webType;
 
  
-    private String contentid;
+    private String contentId;
 
    
-    private Date createtime;
+    private Date createTime;
 
   
     private String description;
@@ -42,13 +43,14 @@ public class ChannelDo {
     private String satellite;
 
    
-    private String showno;
+    private String showNo;
 
  
-    private String imgurl;
+    private String imgUrl;
 
   
     private String property;
-
+    
+    private List<ScheduleDo> scheduleDoList;
     
 }
