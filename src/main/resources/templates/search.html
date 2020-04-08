@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Search</title>
+<link rel="stylesheet" href="/layui/css/layui.css">
+<style>
+#search {     
+     width: 500px;
+     height: 100px;   
+     margin: 20px 30%;  
+}
+#searchtext {
+	float: left;
+	width: 70%;
+}
+</style>
+</head>
+<body>
+	<div style="color: black; background: black;">
+		<div>
+			<ul class="layui-nav">
+				<div style="padding-left: 10%; padding-right: 10%;">
+					<li class="layui-nav-item"><a href=""><i
+							class="layui-icon layui-icon-video"
+							style="font-size: 30px; color: #8f8f1b">EPG</i></a></li>
+					<li class="layui-nav-item"><a href="javascript:;">ALL</a></li>
+					<li class="layui-nav-item"><a href="">TV</a></li>
+					<li class="layui-nav-item"><a href="">MOVIES</a></li>
+					<li class="layui-nav-item"><a href="">SPORTS</a></li>
+					<li class="layui-nav-item"><a href="">KIDS</a></li>
+					<li class="layui-nav-item"><a href="">ADULT</a></li>
+					<li class="layui-nav-item" style="float: right"><select
+						name="Language" lay-verify="">
+							<option value="1" selected="">English</option>
+							<option value="2">Chinese中文</option>
+							<option value="3">Japanese</option>
+					</select></li>
+				</div>
+			</ul>
+		</div>
+		<!-- AD -->
+		<div id="ad" style="padding-left: 10%; padding-right: 10%;">
+
+		</div>
+
+		<!--搜索-->
+		<div id="search">
+			<form class="layui-form" action="">				
+						<input type="text" id="searchtext" name="searchtext"
+							placeholder="input here" class="layui-input">
+						<button class="layui-btn lay-submit layui-icon layui-icon-search"
+							id="searchBtn">Search</button>
+			</form>
+		</div>
+	</div>
+	<!-- <span th:text="'Total '+${model.total}">Total 5</span> -->
+	<div>
+	   
+	</div>
+	<script src="/layui/layui.js" charset="utf-8"></script>
+	<script>
+		layui.use([ 'element', 'layer', 'form' ], function() {
+			var element = layui.element;
+			var layer = layui.layer;
+			var form = layui.form;
+		});
+	</script>
+</body>
+</html>
