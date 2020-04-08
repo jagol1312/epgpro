@@ -44,13 +44,11 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		on channel.id = `schedule`.channelid
 		and UNIX_TIMESTAMP(`schedule`.startdate) = UNIX_TIMESTAMP(#{date})
 		and channel.showNo is NOT NULL
-		and channel.name is not null
+		and channel.showNo != " "
+		and channel.name is not null		
 		and `schedule`.programname is not null
 		order by showNo + 0
 	</select>
-	<select id="test" parameterType="Integer"
-		resultType="com.epgpro.model.ChannelDo">
-		select * from channel where id = #{id}
-	</select>
+	
 
 </mapper>

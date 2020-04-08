@@ -13,9 +13,12 @@ import com.epgpro.model.ChannelDo;
  */
 @Mapper
 public interface ChannelMapper {
-	
-	ChannelDo test(Integer id);
-	
+
+	/**
+	 * 通过日期获得epgs信息
+	 * @param date
+	 * @return
+	 */
 	List<ChannelDo> getEpgsByDate(String date);	
 	
 }

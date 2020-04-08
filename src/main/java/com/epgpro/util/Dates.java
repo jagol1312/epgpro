@@ -17,9 +17,10 @@ public class Dates {
 		Map<String, String> dates = new HashMap(20);
 		SimpleDateFormat df = new SimpleDateFormat("MM-dd");
 		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(new Date());
+		calendar.setTime(new Date());		
 		try {
-			for (int i = 1; i <= 14; i++) {
+			int count = 14;
+			for (int i = 1; i <= count; i++) {
 				if (i <= 7) {
 					calendar.add(Calendar.DAY_OF_YEAR, -1);
 					Date date = calendar.getTime();

@@ -3,6 +3,7 @@ package com.epgpro.controller;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,24 +27,24 @@ import com.epgpro.util.Dates;
 public class Index {
 	@Autowired
 	private ChannelMapper cha;
-	/*
+	/**
 	 * 首页
+	 * @param model
+	 * @return
 	 */
 	@RequestMapping("/")
 	public String index(Model model) {
+		
 		Map<String,String> dates = Dates.getDates();
 		model.addAttribute("dates",dates);
+		
+		List<ChannelDo> list = cha.getEpgsByDate("2020-03-28");
+		model.addAttribute("list",list);
 		return "index";
 	}
 	@RequestMapping("/search")
 	public String search() {
 		return "search";
 	}
-	@ResponseBody
-	@GetMapping("/test")
-	public ChannelDo test() {
-		ChannelDo cd = cha.test(1);
-		System.out.println(cd.toString());
-		return cd;
-	}
+
 }
