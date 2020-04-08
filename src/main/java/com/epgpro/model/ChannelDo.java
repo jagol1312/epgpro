@@ -2,7 +2,7 @@ package com.epgpro.model;
 
 import java.util.Date;
 import java.util.List;
-
+import com.epgpro.model.ScheduleDo;
 import lombok.Data;
 /**
  * 

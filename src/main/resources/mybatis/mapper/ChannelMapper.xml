@@ -13,7 +13,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		<result column="description" property="description" />
 		<result column="language" property="language" />
 		<result column="status" property="status" />
-		<result column="showNo" property="showNO"/>
+		<result column="showNo" property="showNo"/>
 		<result column="imgurl" property="imgUrl" />
 		<result column="property" property="property" />
 		<collection property="scheduleDoList"
@@ -36,14 +36,13 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 			<result column="source" property="source" />
 		</collection>
 	</resultMap>
-	<select id="selectFifteenDaysEpgByAll" parameterType="Date"
+	<select id="getEpgsByDate" parameterType="String"
 		resultMap="ChannelMap">
 		select
 		channel.imgurl,channel.showNo,channel.name,`schedule`.programname,`schedule`.starttime,`schedule`.endtime
 		from channel join `schedule`
 		on channel.id = `schedule`.channelid
-		and UNIX_TIMESTAMP(`schedule`.startdate) BETWEEN
-		UNIX_TIMESTAMP(#{befortoday}) and UNIX_TIMESTAMP(#{aftertoday})
+		and UNIX_TIMESTAMP(`schedule`.startdate) = UNIX_TIMESTAMP(#{date})
 		and channel.showNo is NOT NULL
 		and channel.name is not null
 		and `schedule`.programname is not null

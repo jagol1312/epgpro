@@ -1,8 +1,8 @@
 package com.epgpro.dao;
-
-import java.util.Date;
+import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import com.epgpro.model.ChannelDo;
 
@@ -13,7 +13,9 @@ import com.epgpro.model.ChannelDo;
  */
 @Mapper
 public interface ChannelMapper {
+	
 	ChannelDo test(Integer id);
-	ChannelDo selectFifteenDaysEpgByAll(Date befortoday,Date aftertoday);	
+	
+	List<ChannelDo> getEpgsByDate(String date);	
 	
 }

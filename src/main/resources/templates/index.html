@@ -32,8 +32,13 @@
 	color: white;
 	font-size: 10px;
 }
+#tvguidenav li {
+    width:71px;
+    padding: 0px 0px;
+    
+}
 #tvguidenav li a {
-    padding-left: 0px 19px;
+    padding:5px;
 }
 </style>
 </head>
@@ -176,21 +181,21 @@
 		</div>
 		</div>          	
            <ul class="layui-nav" id="tvguidenav" style="margin-left: 10%; margin-right: 10%;">
-                    <li class="layui-nav-item"><a href="">导航</a></li>
-                    <li class="layui-nav-item"><a href="">数据</a></li>
-                    <li class="layui-nav-item"><a href="">方案</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.leftdate7}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.leftdate6}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.leftdate5}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.leftdate4}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.leftdate3}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.leftdate2}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.leftdate1}"></span></a></li>
                     <li class="layui-nav-item layui-this"><a href="">Today</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
-                    <li class="layui-nav-item"><a href="">社区1</a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.rightdate8}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.rightdate9}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.rightdate10}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.rightdate11}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.rightdate12}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.rightdate13}"></span></a></li>
+                    <li class="layui-nav-item"><a href=""><span th:text="${dates.rightdate14}"></span></a></li>
             </ul>
            <table class="layui-hide" id="table"></table>
 	<script src="/layui/layui.js" charset="utf-8"></script>
@@ -200,6 +205,7 @@
 			var element = layui.element;
 			var layer = layui.layer;
 			var form = layui.form;
+			
 		});
 	</script>
 	<script>
